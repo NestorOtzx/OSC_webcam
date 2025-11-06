@@ -1,5 +1,7 @@
 # Webcam OSC Grid Analyzer
 
+xd
+
 A Python application that captures webcam video, divides it into a grid, analyzes each cell's visual properties, and sends the data via OSC (Open Sound Control) protocol for real-time creative applications.
 
 ## Purpose
