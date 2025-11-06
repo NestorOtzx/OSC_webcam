@@ -9,6 +9,7 @@ from webcam_osc.visualizer import DataVisualizer
 
 
 def main() -> None:
+    print("launching")
     config: AppConfig = AppConfig(
         grid=GridConfig(rows=4, cols=4),
         osc=OSCConfig(host="127.0.0.1", port=5005),
@@ -16,6 +17,7 @@ def main() -> None:
         target_fps=30
     )
 
+    print("launching 2")
     visualizer: Optional[DataVisualizer] = DataVisualizer(config.grid, config.show_camera) if config.show_visualizer else None
 
     if visualizer:
@@ -32,6 +34,8 @@ def main() -> None:
 
     if visualizer:
         visualizer.show_loading_screen("Starting camera...")
+
+    print("launching 4")
 
     with WebcamCapture(config.camera_index) as capture:
         if not capture.start():
